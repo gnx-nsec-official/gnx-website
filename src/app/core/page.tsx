@@ -1,10 +1,9 @@
 import React from 'react'
-import NavBar from '@/components/NavBar'
 
 const Page = () => {
   return (
     <div>
-      Welcome
+        This is Core Team
     </div>
   )
 }
