@@ -10,9 +10,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Client {
-  id          Bytes   @id @default(auto()) @map("_id") @db.ObjectId
+model JoinRequest {
+  id          Bytes  @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   email       String
-  phoneNumber String?
+  phoneNumber String
+  reason      String
+  department  String
+  gradYear    String
+  gender      String
 }

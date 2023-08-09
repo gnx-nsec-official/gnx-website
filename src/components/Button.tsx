@@ -7,7 +7,7 @@ interface Props {
 
 const Button = (props: Props) => {
     return (
-        <button className='bg-green-400 text-white p-2 m-2' onClick={props.onClick}>
+        <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600' onClick={props.onClick}>
             {props.children}
         </button>
     )

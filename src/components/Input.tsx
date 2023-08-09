@@ -9,7 +9,8 @@ interface InputProps {
     className?: string,
     type?: 'text' | 'number' | 'email',
     name?: string,
-    value?: string
+    value?: string,
+    icon?: React.ReactNode
 }
 
 const Input = ({
@@ -28,22 +29,24 @@ const Input = ({
     }
 
     return (
-        <>
+        <div className='py-2'>
             {
                 label &&
-                <label htmlFor={name}>
+                <label htmlFor={name} className='block font-medium mb-1'>
                     {label}
                 </label>
             }
             <input
                 id={name}
+                name={name}
+                type={type}
                 onChange={handleChange}
-                className={`outline-none p-2 m-2 border border-green-600 rounded ${className}`}
+                className={`outline-none p-2 border rounded w-full ${className}`}
                 value={text}
                 placeholder={placeholder}
                 autoComplete='off'
             />
-        </>
+        </div>
     )
 }
 
