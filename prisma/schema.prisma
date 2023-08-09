@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Client {
-  id Bytes @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  email String
-  contact String
+  id          Bytes   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  email       String
+  phoneNumber String?
 }
