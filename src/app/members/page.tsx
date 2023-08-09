@@ -1,5 +1,5 @@
 import React from 'react'
-import Member from '@/components/Member';
+import MemberCard from '@/components/MemberCard';
 import MemberInterface from '@/interface/member.interface';
 
 const members: MemberInterface[] = [
@@ -36,10 +36,10 @@ const members: MemberInterface[] = [
 
 const Members = () => {
   return (
-    <div className='p-3 grid grid-cols-3 gap-2 w-2/3 m-auto'>
+    <div className='p-3 grid grid-cols-4 gap-2 w-2/3 m-auto'>
       {
         members.map((item, index) => (
-          <Member
+          <MemberCard
             key={index}
             member={item}
           />

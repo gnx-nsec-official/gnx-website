@@ -21,12 +21,12 @@ const NavBar = () => {
     return (
         <nav className='p-2 text-black border-b-2 select-none'>
             <div className='flex items-center justify-between w-2/3 m-auto'>
-                <div className='flex items-center'>
+                <Link href="/" className='flex items-center'>
                     <Image height={20} width={20} alt='Logo' src={logo} className='m-2' />
                     <div className='text-2xl font-bold text-orange-900'>
                         GNX
                     </div>
-                </div>
+                </Link>
                 <NavButtons />
                 <Link href="/join">
                     <button className='py-2 px-4 bg-green-200 text-green-500'>JOIN</button>
