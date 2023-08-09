@@ -4,6 +4,8 @@ import React, { useState, ChangeEvent } from 'react';
 import axios from 'axios';
 import Input from '@/components/Input';
 import Button from '@/components/Button';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface State {
   name: string;
@@ -28,7 +30,8 @@ const Page = () => {
   const handleClick = () => {
     sendRequest().then((data) => {
       if (data.response) {
-        console.log(data);
+        // console.log(data);
+        toast("We Will Contact to You Soon...")
       }
     });
   };
@@ -62,6 +65,7 @@ const Page = () => {
         />
         <Button onClick={handleClick}>Click Here</Button>
       </div>
+      <ToastContainer />
     </div>
   );
 };

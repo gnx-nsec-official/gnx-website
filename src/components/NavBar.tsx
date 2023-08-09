@@ -6,8 +6,7 @@ import NavButton from './NavButton'
 const NavButtons = () => {
     return (
         <>
-            <NavButton href='/core' innerText='Core Team' />
-            <NavButton href='/developers' innerText='Developer Team' />
+            <NavButton href='/members' innerText='Our Members' />
             <NavButton href='/contact' innerText='Contact US' />
             <NavButton href='/join' innerText='Join' />
         </>
