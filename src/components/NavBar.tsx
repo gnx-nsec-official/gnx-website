@@ -6,11 +6,12 @@ import Link from 'next/link';
 
 const NavButtons = ({ className }: { className?: string }) => {
     return (
-        <div className={`md:flex md:space-x-4 md:items-center ${className}`}>
+        <div className={`md:flex md:space-x-5 md:items-center ${className}`}>
             <NavButton href='/members' innerText='Members' />
             <NavButton href='/event' innerText='Events' />
             <NavButton href='/gallary' innerText='Gallery' />
             <NavButton href='/contact' innerText='Contact Us' />
+            <NavButton href='/about' innerText='About' />
         </div>
     );
 };
