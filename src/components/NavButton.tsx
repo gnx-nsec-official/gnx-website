@@ -10,7 +10,7 @@ interface NavBarProps {
 
 const NavButton = (props: NavBarProps) => {
     return (
-        <Link href={props.href} className='p-2 m-1 text-black transition rounded-md hover:bg-slate-200'>
+        <Link href={props.href} className='p-2 md:px-4 m-1 text-black transition rounded-md hover:bg-slate-200'>
             {props.innerText}
         </Link>
     )

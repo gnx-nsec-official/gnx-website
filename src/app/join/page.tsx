@@ -75,7 +75,7 @@ const Page = () => {
 
   return (
     <div className='flex justify-center md:items-center h-[90vh] select-none'>
-      <div className='p-2 flex flex-col md:w-1/3'>
+      <div className='p-2 flex flex-col w-11/12 md:w-1/3'>
         <Input
           name='name'
           value={state.name}

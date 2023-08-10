@@ -44,7 +44,7 @@ const NavBar = () => {
 
                 <NavButtons className='hidden md:block' />
                 <JoinButton className='hidden md:block' />
-                <NavButtons className='md:hidden py-2' />
+                <NavButtons className='md:hidden py-2 text-sm' />
             </div>
         </nav>
     );

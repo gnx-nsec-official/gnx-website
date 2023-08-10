@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className} suppressHydrationWarning={true}>
+      <body className={`min-h-screen ${font.className}`} suppressHydrationWarning={true}>
         <NavBar />
         <div>
           {children}
