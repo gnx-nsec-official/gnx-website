@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         "phoneNumber": res.phoneNumber as string,
         "reason": res.reason as string,
         "department": res.department as string,
-        "gradYear": res.department as string,
+        "gradYear": res.gradYear as string,
         "gender": res.gender as string
       }
     })

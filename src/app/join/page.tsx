@@ -61,7 +61,7 @@ const Page = () => {
     if (data?.response) {
       toast('We Will Contact You Soon...');
     }
-    console.log(state)
+    // console.log(state)
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -74,8 +74,8 @@ const Page = () => {
   }
 
   return (
-    <div className='flex justify-center items-center h-[90vh] select-none'>
-      <div className='p-2 flex flex-col w-1/3'>
+    <div className='flex justify-center md:items-center h-[90vh] select-none'>
+      <div className='p-2 flex flex-col md:w-1/3'>
         <Input
           name='name'
           value={state.name}
@@ -116,7 +116,7 @@ const Page = () => {
         <Input
           name='reason'
           value={state.reason}
-          label='Why Do You Want to Join?'
+          label='Why Do You Want to Join? *'
           onChange={handleInputChange}
         />
         <Button onClick={handleClick}>Request To Join</Button>
