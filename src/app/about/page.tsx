@@ -17,7 +17,7 @@ const About = () => {
                     a community of Linux-loving & open-source enthusiastic people.
                 </p>
 
-                <h2 className="text-xl font-semibold mb-2">Why 'GNX's Not niXal'?</h2>
+                <h2 className="text-xl font-semibold mb-2">Why GNX&apos;s Not niXal&apos;?</h2>
                 <p className="text-gray-700 mb-4">
                     Well, it has a pretty interesting story behind it! ;)
                 </p>
