@@ -20,3 +20,20 @@ model JoinRequest {
   gradYear    String
   gender      String
 }
+
+model Members {
+  id          Bytes   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  imgFileName String
+  role        Role
+  linkedIn    String?
+  github      String?
+  twitter     String?
+  instagram   String?
+}
+
+enum Role {
+  USER
+  MEMBERS
+  ADMIN
+}

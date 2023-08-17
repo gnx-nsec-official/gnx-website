@@ -1,11 +1,15 @@
+enum Role {
+    USER = 'USER',
+    MEMBERS = 'MEMBERS',
+    ADMIN = 'ADMIN'
+}
+
 export default interface Member {
-    name: string,
-    imgFileName: string,
-    role: string,
-    links: {
-        linkedIn?: string,
-        github?: string,
-        instagram?: string,
-        twitter?: string,
-    },
+    id: any
+    name: string;
+    imgFileName: string;
+    role: Role;
+    linkedIn?: string;
+    github?: string;
+    instagram?: string;
 }

@@ -19,7 +19,7 @@ const Member = ({ member }: MemberProps) => {
             transition={{ duration: 0.5 }}
             whileHover={{ boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.2)' }}
         >
-            <div className='mr-4'>
+            {/* <div className='mr-4'>
                 <Image
                     src={`https://ik.imagekit.io/kftm0sihh/${member.imgFileName}`}
                     alt={member.name}
@@ -27,7 +27,7 @@ const Member = ({ member }: MemberProps) => {
                     width={150}
                     className='rounded-full p-2 shadow-md'
                 />
-            </div>
+            </div> */}
             <div className='flex flex-col text-center p-1'>
                 <span className='text-lg font-semibold'>
                     {member.name}
@@ -37,23 +37,23 @@ const Member = ({ member }: MemberProps) => {
                 </span>
             </div>
             <div className='flex mt-2 space-x-2'>
-                {member.links.linkedIn && (
-                    <a href={member.links.linkedIn} target='_blank' rel='noopener noreferrer'>
+                {member.linkedIn && (
+                    <a href={member.linkedIn} target='_blank' rel='noopener noreferrer'>
                         <Linkedin size={24} />
                     </a>
                 )}
-                {member.links.github && (
-                    <a href={member.links.github} target='_blank' rel='noopener noreferrer'>
+                {member.github && (
+                    <a href={member.github} target='_blank' rel='noopener noreferrer'>
                         <Github size={24} />
                     </a>
                 )}
-                {member.links.twitter && (
-                    <a href={member.links.twitter} target='_blank' rel='noopener noreferrer'>
+                {/* {member. && (
+                    <a href={member.twitter} target='_blank' rel='noopener noreferrer'>
                         <Twitter size={24} />
                     </a>
-                )}
-                {member.links.instagram && (
-                    <a href={member.links.instagram} target='_blank' rel='noopener noreferrer'>
+                )} */}
+                {member.instagram && (
+                    <a href={member.instagram} target='_blank' rel='noopener noreferrer'>
                         <Instagram size={24} />
                     </a>
                 )}
