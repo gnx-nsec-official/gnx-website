@@ -8,7 +8,6 @@ const About = () => {
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
                 className="bg-gray-100 my-4 p-6 rounded-lg shadow-md w-11/12 md:w-5/12"
             >
                 <h1 className="text-2xl font-semibold mb-4">Who are we?</h1>

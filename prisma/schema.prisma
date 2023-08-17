@@ -21,6 +21,13 @@ model JoinRequest {
   gender      String
 }
 
+model Contact {
+  id      Bytes  @id @default(auto()) @map("_id") @db.ObjectId
+  name    String
+  email   String
+  message String
+}
+
 model Members {
   id          Bytes   @id @default(auto()) @map("_id") @db.ObjectId
   name        String
