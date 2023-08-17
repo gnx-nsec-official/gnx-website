@@ -6,20 +6,19 @@ import MemberInterface from '@/interface/member.interface';
 import FetchMembers from './members';
 
 const Members = () => {
-  const [data, setData] = useState<MemberInterface[]>()
+  const [data, setData] = useState<MemberInterface[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await FetchMembers()
-      // console.log(data)
-      setData(data);
+      const resp = await FetchMembers()
+      setData(resp);
     }
 
     fetchData();
   }, [])
   return (
-    <div className='p-3 grid grid-cols-4 gap-2 w-2/3 m-auto'>
-      {data?.map((item, index) => {
+    <div className='p-3 grid grid-cols-1 md:grid-cols-4 gap-2 w-2/3 m-auto'>
+      {data && data?.map((item, index) => {
         return <MemberCard
           key={index}
           member={item}
