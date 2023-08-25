@@ -59,7 +59,7 @@ const Page = () => {
   const handleClick = async () => {
     const data = await sendRequest();
     if (data?.response) {
-      toast('We Will Contact You Soon...');
+      toast("Thanks for Joining Request, You'll recieve email When you are approved");
     }
     // console.log(state)
   };

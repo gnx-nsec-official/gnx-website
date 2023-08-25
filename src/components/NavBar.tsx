@@ -30,7 +30,7 @@ const JoinButton = ({ className }: { className?: string }) => {
                 whileTap={{
                     scale: 0.9,
                 }}
-                transition={{duration: 0.2}}
+                transition={{ duration: 0.2 }}
                 className='py-2 px-4 bg-green-200 text-green-500'>
                 JOIN
             </motion.button>
@@ -53,7 +53,12 @@ const NavBar = () => {
             <div className='flex flex-col md:flex-row items-center justify-between md:w-2/3 m-auto'>
                 <div className='flex flex-row justify-between w-full md:w-min'>
                     <Logo />
-                    <JoinButton className='md:hidden' />
+                    {/* <JoinButton className='md:hidden' /> */}
+                    <button>
+                        <Link href="/api/auth/login">
+                            Login
+                        </Link>
+                    </button>
                 </div>
 
                 <NavButtons className='hidden md:block' />
