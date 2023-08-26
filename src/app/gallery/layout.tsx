@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'GNX: Members',
-    description: 'All Core are developers and Core Members',
+    title: 'GNX: Gallery',
+    description: 'Our All Event Gallery',
 }
 
-export default function MembersLayout({
+export default function GalleryLayout({
     children,
 }: {
     children: React.ReactNode
