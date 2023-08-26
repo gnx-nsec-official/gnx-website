@@ -7,7 +7,8 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 const Page = () => {
   return (
     <div className='p-2 m-auto w-2/3'>
-      <ResponsiveMasonry
+      Gallary Will Update soon...
+      {/* <ResponsiveMasonry
         columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
       >
         <Masonry columnsCount={3}>
@@ -24,7 +25,7 @@ const Page = () => {
           <GalleryImage />
           <GalleryImage />
         </Masonry>
-      </ResponsiveMasonry>
+      </ResponsiveMasonry> */}
     </div>
   )
 }

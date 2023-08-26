@@ -8,13 +8,25 @@ import Link from 'next/link';
 import { motion } from 'framer-motion'
 
 const NavButtons = ({ className }: { className?: string }) => {
+    const pages = [
+        { "href": "/gallary", "innerText": "Gallary", title: 'Our Event Gallary' },
+        { "href": "/event", "innerText": "Events", title: "You can check out Upcoming Events"},
+        { "href": "/contact", "innerText": "Contact Us", title: "Contact with us for further information" },
+        { "href": "/about", "innerText": "About", title: "About Us" }
+    ]
+
     return (
         <div className={`md:flex md:space-x-5 md:items-center ${className}`}>
-            <NavButton href='/members' innerText='Members' />
-            <NavButton href='/event' innerText='Events' />
-            {/* <NavButton href='/gallary' innerText='Gallery' /> */}
-            <NavButton href='/contact' innerText='Contact Us' />
-            <NavButton href='/about' innerText='About' />
+            {
+                pages.map(item => (
+                    <NavButton
+                        key={item.href}
+                        href={item.href}
+                        title={item.title}
+                        innerText={item.innerText}
+                    />
+                ))
+            }
         </div>
     );
 };
@@ -53,12 +65,7 @@ const NavBar = () => {
             <div className='flex flex-col md:flex-row items-center justify-between md:w-2/3 m-auto'>
                 <div className='flex flex-row justify-between w-full md:w-min'>
                     <Logo />
-                    {/* <JoinButton className='md:hidden' /> */}
-                    <button>
-                        <Link href="/api/auth/login">
-                            Login
-                        </Link>
-                    </button>
+                    <JoinButton className='md:hidden' />
                 </div>
 
                 <NavButtons className='hidden md:block' />
