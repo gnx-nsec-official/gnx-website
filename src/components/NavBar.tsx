@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 const NavButtons = ({ className }: { className?: string }) => {
     const pages = [
-        { "href": "/gallary", "innerText": "Gallary", title: 'Our Event Gallary' },
+        { "href": "/gallery", "innerText": "Gallery", title: 'Our Event Gallery' },
         { "href": "/event", "innerText": "Events", title: "You can check out Upcoming Events"},
         { "href": "/contact", "innerText": "Contact Us", title: "Contact with us for further information" },
         { "href": "/about", "innerText": "About", title: "About Us" }

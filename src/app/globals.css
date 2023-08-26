@@ -3,14 +3,11 @@
 @tailwind utilities;
 
 * {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none; /*Remove Scrollbar on Edge*/
+    scrollbar-width: none; /*Remove Scrollbar on Firefox*/
+    -webkit-tap-highlight-color: transparent; /*Prevent blue highlight*/
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { /*Remove Scrollbar on Chrome*/
     display: none;
-}
-
-section {
-    min-height: 88vh;
 }

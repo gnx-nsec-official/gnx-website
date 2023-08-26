@@ -4,6 +4,7 @@ import React from 'react'
 import { motion, useInView } from 'framer-motion'
 import Typewriter from 'typewriter-effect';
 import Card from '@/components/home/Card';
+import Section from '@/components/Section';
 
 const Page = () => {
   const ref = React.useRef(null);
@@ -12,7 +13,7 @@ const Page = () => {
 
   return (
     <main>
-      <section className='flex justify-center items-center'>
+      <Section className='flex justify-center items-center'>
         <motion.h1
           initial={{
             y: 200,
@@ -31,9 +32,9 @@ const Page = () => {
             }}
           />
         </motion.h1>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <motion.h2>
           GNX aims to foster Linux growth and promote open source contributions.
         </motion.h2>
@@ -63,23 +64,24 @@ const Page = () => {
         <motion.span>
           Expand your knowledge of Linux systems by diving into these popular choices, tailored for smooth user experience.
         </motion.span> */}
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <motion.h3 ref={ref} style={{
-          transform: isInView ? "none" : "translateX(-200px)"}}>
+          transform: isInView ? "none" : "translateX(-200px)"
+        }}>
           UPCOMING EVENTS
         </motion.h3>
         <motion.span>
           Stay infromed with our exiting lineup of gatherings, workshops, and conferances.
         </motion.span>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <motion.h3>
           OUR MEMBERS
         </motion.h3>
-      </section>
+      </Section>
 
     </main>
   )
