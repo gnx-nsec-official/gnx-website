@@ -1,15 +1,17 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Typewriter from 'typewriter-effect';
 import Card from '@/components/home/Card';
 import Section from '@/components/Section';
 
 const Page = () => {
-  const ref = React.useRef(null);
-
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "0px 100px -50px 0px"
+  });
 
   return (
     <main>
@@ -67,9 +69,7 @@ const Page = () => {
       </Section>
 
       <Section>
-        <motion.h3 ref={ref} style={{
-          transform: isInView ? "none" : "translateX(-200px)"
-        }}>
+        <motion.h3>
           UPCOMING EVENTS
         </motion.h3>
         <motion.span>
@@ -78,9 +78,9 @@ const Page = () => {
       </Section>
 
       <Section>
-        <motion.h3>
+        <motion.div ref={ref}>
           OUR MEMBERS
-        </motion.h3>
+        </motion.div>
       </Section>
 
     </main>
