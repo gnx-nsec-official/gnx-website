@@ -10,7 +10,7 @@ interface ImageInterface {
 }
 
 const Image = (props: ImageInterface) => {
-  const cloudName: string = process.env.NEXT_PUBLIC_CLOUD_NAME as string;
+  const cloudName: string = process.env.NEXT_PUBLIC_CLOUD_NAME ?? "dk6crgnze";
 
   const myImage = new CloudinaryImage(props.publicId, {
     cloudName: cloudName,
