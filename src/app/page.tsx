@@ -1,90 +1,102 @@
-'use client'
+import React from "react";
+import Section from "@/components/Section";
+import Image from "next/image";
+import background from "public/img.jpg";
+import Button from "@/components/home/Button";
+import FeatureCard from "@/components/home/FeatureCard";
+import JoinCard from "@/components/home/JoinCard";
+import Heading from "@/components/home/Heading";
+import Footer from "@/components/Footer";
+import ImageCoroutine from "@/components/ImageCoroutines";
 
-import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import Typewriter from 'typewriter-effect';
-import Card from '@/components/home/Card';
-import Section from '@/components/Section';
-
-const Page = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "0px 100px -50px 0px"
-  });
-
+const features = [
+  {
+    heading: "Sign Up",
+    body: "Completes all the work associated with planning and processing",
+  },
+  {
+    heading: "Worth Of Money",
+    body: "After successful access then book from exclusive deals & pricing",
+  },
+  {
+    heading: "Exiting Travel",
+    body: "Start and explore a wide range of exciting travel experience.",
+  },
+];
+const Home = () => {
   return (
     <main>
-      <Section className='flex justify-center items-center'>
-        <motion.h1
-          initial={{
-            y: 200,
-            opacity: 0
-          }}
-          animate={{
-            y: 0,
-            opacity: 1
-          }}
-          className='w-fit text-xl md:text-5xl lg:text-7xl font-bold'>
-          {/* Unlease the power of <span className='text-orange-900'>GNX</span> Linux. */}
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString('Unlease the power of GNX Linux.')
-                .start();
-            }}
-          />
-        </motion.h1>
-      </Section>
-
-      <Section>
-        <motion.h2>
-          GNX aims to foster Linux growth and promote open source contributions.
-        </motion.h2>
-
-        <div className='m-auto w-5/12 grid grid-cols-2 gap-2'>
-          <Card
-            heading={'Join the open source movement and make a difference!'}
-            body={'Contribute to a variety of projects with GNX, and experience the thrill of collaborating in a passionate community.'}
-          />
-          <Card
-            heading={'Discover the power of Debian and Arch Linux distributions.'}
-            body={'Expand your knowledge of Linux systems by diving into these popular choices, tailored for smooth user experience.'}
-          />
-
+      <Section className="" size="LARGE">
+        <div>OUR VISION</div>
+        <div>MOTION</div>
+        <div>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum.
         </div>
-
-        {/* <motion.h3>
-          Join the open source movement and make a difference!
-        </motion.h3>
-        <motion.span>
-          Contribute to a variety of projects with GNX, and experience the thrill of collaborating in a passionate community.
-        </motion.span>
-
-        <motion.h3>
-          Discover the power of Debian and Arch Linux distributions.
-        </motion.h3>
-        <motion.span>
-          Expand your knowledge of Linux systems by diving into these popular choices, tailored for smooth user experience.
-        </motion.span> */}
+        <div>{/* <Button onClick={() => {}}>Enroll Now</Button> */}</div>
       </Section>
-
       <Section>
-        <motion.h3>
-          UPCOMING EVENTS
-        </motion.h3>
-        <motion.span>
-          Stay infromed with our exiting lineup of gatherings, workshops, and conferances.
-        </motion.span>
+        <Heading>Why Join With Us?</Heading>
+        <div>
+          We ensure that you’ll embark on a perfectly planned, safe vacation at
+          a price you can afford.
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {features.map((item, index) => (
+            <FeatureCard key={index} heading={item.heading} body={item.body} />
+          ))}
+        </div>
       </Section>
-
       <Section>
-        <motion.div ref={ref}>
-          OUR MEMBERS
-        </motion.div>
+        <Heading>OUR EVENTS</Heading>
+        <Heading>OUR EVENT RESULT</Heading>
+        <div>
+          PageTraffic offers top-notch SEO and digital marketing solutions.
+        </div>
       </Section>
-
+      <Section>
+        <Heading>Membership</Heading>
+        <div className="grid grid-cols-2">
+          <JoinCard heading="JOIN GNX" />
+          <JoinCard heading="JOIN GNX CORE" />
+        </div>
+      </Section>
+      <Section>
+        <Heading>What People say about us.</Heading>
+        <div>
+          Our Clients send us bunch of smilies with our services and we love
+          them.
+        </div>
+      </Section>
+      <Section>
+        <Heading>Get update with latest image</Heading>
+        <div className="flex">
+          <ImageCoroutine 
+            src={background}
+            alt="uhgivdf"
+            heading="Heading"
+            body="Body"
+            />
+          <ImageCoroutine 
+            src={background}
+            alt="uhgivdf"
+            heading="Heading"
+            body="Body"
+            />
+          <ImageCoroutine 
+            src={background}
+            alt="uhgivdf"
+            heading="Heading"
+            body="Body"
+            />
+        </div>
+      </Section>
+      <Section>
+        <Heading>Subscribe and get exclusive deals & offer</Heading>
+      </Section>
     </main>
-  )
-}
+  );
+};
 
-export default Page
+export default Home;
