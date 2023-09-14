@@ -1,16 +1,20 @@
-import React from 'react'
+import React from "react";
 
 interface Props {
-    onClick: () => void,
-    children: React.ReactNode
+  onClick: () => void;
+  children: React.ReactNode;
+  className?: string;
 }
 
-const Button = (props: Props) => {
-    return (
-        <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600' onClick={props.onClick}>
-            {props.children}
-        </button>
-    )
-}
+const Button = ({ onClick, className = "", children }: Props) => {
+  return (
+    <button
+      className={`${className} px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 select-none`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
 
-export default Button
+export default Button;

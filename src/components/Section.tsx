@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
 interface Props {
-    children: React.ReactNode;
-    className?: string;
-    size?: "MEDIUM" | "LARGE";
+  children: ReactNode;
+  className?: string;
+  size?: "MEDIUM" | "LARGE" | "SMALL";
 }
 
-const Section = ({ children, className = "", size = "MEDIUM" }: Props) => {
-    return (
-        <section className={`${size === "MEDIUM" ? "min-w-[50vh]" : "min-w-[80vh]"} ${className}`}>
-            {children}
-        </section>
-    );
-}
+const Section: React.FC<Props> = ({ children, className = "", size = "MEDIUM" }) => {
+  const getSizeClassName = () => {
+    switch (size) {
+      case "SMALL":
+        return "min-h-[30vh]";
+      case "MEDIUM":
+        return "min-h-[50vh]";
+      case "LARGE":
+        return "min-h-[80vh]";
+      default:
+        return "";
+    }
+  };
+
+  const sectionClassName = `${getSizeClassName()} ${className}`;
+
+  return (
+    <section className={sectionClassName}>
+      {children}
+    </section>
+  );
+};
 
 export default Section;

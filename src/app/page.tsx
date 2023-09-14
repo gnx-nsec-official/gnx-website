@@ -1,13 +1,14 @@
+"use client";
+
 import React from "react";
 import Section from "@/components/Section";
 import Image from "next/image";
-import background from "public/img.jpg";
-import Button from "@/components/home/Button";
+import background from "public/background.jpeg";
 import FeatureCard from "@/components/home/FeatureCard";
 import JoinCard from "@/components/home/JoinCard";
 import Heading from "@/components/home/Heading";
-import Footer from "@/components/Footer";
 import ImageCoroutine from "@/components/ImageCoroutines";
+import Button from "@/components/Button";
 
 const features = [
   {
@@ -23,18 +24,26 @@ const features = [
     body: "Start and explore a wide range of exciting travel experience.",
   },
 ];
+
 const Home = () => {
   return (
     <main>
-      <Section className="" size="LARGE">
-        <div>OUR VISION</div>
-        <div>MOTION</div>
-        <div>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum.
+      <Image alt="background image" src={background} className="-z-10" fill />
+      <Section className="text-white flex flex-col justify-center" size="LARGE">
+        <div className="px-7">
+          <div className="flex flex-col">
+            <Heading level="MEDIUM" className="p-3">OUR VISION</Heading>
+            <Heading level="LARGE" className="p-2">MOTION</Heading>
+          </div>
+          <div className=" w-1/4">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum.
+          </div>
+          <div>
+            <Button onClick={() => {}} className="my-3">Enroll Now</Button>
+          </div>
         </div>
-        <div>{/* <Button onClick={() => {}}>Enroll Now</Button> */}</div>
       </Section>
       <Section>
         <Heading>Why Join With Us?</Heading>
@@ -49,8 +58,8 @@ const Home = () => {
         </div>
       </Section>
       <Section>
-        <Heading>OUR EVENTS</Heading>
-        <Heading>OUR EVENT RESULT</Heading>
+        <Heading level="MEDIUM">OUR EVENTS</Heading>
+        <Heading level="LARGE">OUR EVENT RESULT</Heading>
         <div>
           PageTraffic offers top-notch SEO and digital marketing solutions.
         </div>
@@ -72,24 +81,24 @@ const Home = () => {
       <Section>
         <Heading>Get update with latest image</Heading>
         <div className="flex">
-          <ImageCoroutine 
+          <ImageCoroutine
             src={background}
             alt="uhgivdf"
             heading="Heading"
             body="Body"
-            />
-          <ImageCoroutine 
+          />
+          <ImageCoroutine
             src={background}
             alt="uhgivdf"
             heading="Heading"
             body="Body"
-            />
-          <ImageCoroutine 
+          />
+          <ImageCoroutine
             src={background}
             alt="uhgivdf"
             heading="Heading"
             body="Body"
-            />
+          />
         </div>
       </Section>
       <Section>
