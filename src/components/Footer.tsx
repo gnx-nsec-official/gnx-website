@@ -50,8 +50,8 @@ const ListComponent = (props: Menu) => {
       {props.links.map((item, index) => {
         const href = item.href || `/${item.text.toLowerCase()}`;
         return (
-          <div className="flex flex-col">
-            <ButtonComponent text={item.text} key={index} href={href} />
+          <div className="flex flex-col" key={index}>
+            <ButtonComponent text={item.text} href={href} />
           </div>
         );
       })}
